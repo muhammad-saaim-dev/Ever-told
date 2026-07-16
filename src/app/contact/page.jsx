@@ -37,74 +37,104 @@ export default function ContactPage() {
   return (
     <div className="bg-[#FBF9F6] text-[#2C3E2D]">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-12 md:pt-16 pb-12">
-        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
-          {/* Hero Left Content */}
-          <div className="w-full md:w-[48%] flex flex-col items-start z-10">
-            <span className="text-[12px] font-bold text-[#55624C] uppercase tracking-widest leading-none mb-6">
-              Contact Us
-            </span>
-            
-            <h1 className="font-serif text-4xl md:text-[48px] leading-[1.15] text-[#2C3E2D] font-normal tracking-tight mb-6">
-              We&apos;re here to <br />
-              help you preserve <br />
-              <span className="text-[#55624C]">what matters most.</span>
-            </h1>
-            <div className="w-12 h-[1.5px] bg-[#55624C]/60 mb-8"></div>
-            
-            <p className="text-[14px] text-[#4A5546] font-medium leading-relaxed mb-8">
-              Have questions about our services, packages, or how to get started? We&apos;d love to hear from you. Our team is here to guide you every step of the way.
-            </p>
-            
-            {/* Trust Badges */}
-            <div className="flex flex-col gap-5">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full border border-[#E8E1DA] flex items-center justify-center text-[#55624C] flex-shrink-0 bg-white">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="text-[13px] font-bold text-[#2C3E2D]">Personal Support</h4>
-                  <p className="text-[12px] text-[#5F6A5B] font-bold mt-0.5">Real people. Real care.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full border border-[#E8E1DA] flex items-center justify-center text-[#55624C] flex-shrink-0 bg-white">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="text-[13px] font-bold text-[#2C3E2D]">Your Story is Safe</h4>
-                  <p className="text-[12px] text-[#5F6A5B] font-bold mt-0.5">Privacy and security are our promise.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Hero Right Image with left-fade effect */}
-          <div className="w-full md:w-[50%] h-[350px] md:h-[480px] relative rounded-[8px] overflow-hidden border border-[#E8E1DA]">
+      <section className="relative w-full overflow-hidden bg-[#FBF9F6]">
+        {/* Right Column - Image (Desktop only, absolutely positioned for full bleed) */}
+        <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[55%] h-full z-0 pointer-events-none hidden lg:block">
+          <div className="relative w-full h-full">
             <Image
               src="/contact_hero.png"
               alt="Cozy dresser with candle and vintage photo"
               fill
-              className="object-cover object-center"
               priority
+              sizes="(max-width: 1024px) 100vw, 55vw"
+              className="object-cover object-center"
             />
-            {/* Smooth gradient fade to blend the image leftward on larger screens */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#FBF9F6] via-transparent to-transparent opacity-80 pointer-events-none hidden md:block"></div>
+            {/* Gradient overlays to blend the image seamlessly */}
+            <div className="absolute inset-y-0 left-0 w-[300px] bg-gradient-to-r from-[#FBF9F6] via-[#FBF9F6]/85 to-transparent" />
+          </div>
+        </div>
+
+        <div className="max-w-5xl mx-auto px-6 relative z-10 pt-12 md:pt-16 pb-32 md:pb-48">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            {/* Left Column - Text Content */}
+            <div className="lg:col-span-6 flex flex-col items-start">
+              <span className="text-[12px] font-bold text-[#55624C] uppercase tracking-widest leading-none mb-6">
+                Contact Us
+              </span>
+              
+              <h1 className="font-serif text-4xl md:text-[48px] leading-[1.15] text-[#2C3E2D] font-normal tracking-tight mb-6">
+                We&apos;re here to <br />
+                help you preserve <br />
+                <span className="text-[#55624C]">what matters most.</span>
+              </h1>
+              <div className="w-12 h-[1.5px] bg-[#55624C]/60 mb-8"></div>
+              
+              <p className="text-[14px] text-[#4A5546] font-bold leading-relaxed mb-8">
+                Have questions about our services, packages,<br />
+                or how to get started? We&apos;d love to hear from you.<br />
+                Our team is here to guide you every step of the way.
+              </p>
+              
+              {/* Trust Badges */}
+              <div className="flex flex-col sm:flex-row gap-5 sm:gap-8">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full border border-[#E8E1DA] flex items-center justify-center text-[#55624C] flex-shrink-0 bg-white">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-[13px] font-bold text-[#2C3E2D]">Personal Support</h4>
+                    <p className="text-[12px] text-[#5F6A5B] font-bold mt-0.5">
+                      Real people,<br />
+                      Real care.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full border border-[#E8E1DA] flex items-center justify-center text-[#55624C] flex-shrink-0 bg-white">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-[13px] font-bold text-[#2C3E2D]">Your Story is Safe</h4>
+                    <p className="text-[12px] text-[#5F6A5B] font-bold mt-0.5">
+                      Privacy and security<br />
+                      Are our promise.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Inline Image for Mobile/Tablet */}
+              <div className="block lg:hidden mt-8 w-full relative aspect-[4/3] overflow-hidden rounded-[8px] border border-[#E8E1DA]">
+                <Image
+                  src="/contact_hero.png"
+                  alt="Cozy dresser with candle and vintage photo"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-[#FBF9F6] to-transparent" />
+                <div className="absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-[#FBF9F6] to-transparent" />
+              </div>
+            </div>
+
+            {/* Spacer Column - Keeps grid aligned on Desktop */}
+            <div className="lg:col-span-6 hidden lg:block" />
           </div>
         </div>
       </section>
 
       {/* Main 3-Column Content Section */}
-      <section className="py-12 md:py-16">
-        <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="relative z-20 -mt-12 md:-mt-20 pb-4 md:pb-6">
+        <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0">
           
           {/* Column 1: Let's Start a Conversation */}
-          <div className="flex flex-col pr-0 md:pr-4">
+          <div className="bg-white border border-[#E8E1DA] rounded-[8px] p-6 md:p-7 shadow-sm flex flex-col">
             <h2 className="font-serif text-[24px] text-[#2C3E2D] font-medium mb-3">
               Let&apos;s Start a Conversation
             </h2>
@@ -121,7 +151,7 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h5 className="text-[11px] font-bold uppercase tracking-wider text-[#7E8B77]">Email Us</h5>
+                  <h5 className="text-[11px] font-bold uppercase tracking-wider text-[#4A5546]">Email Us</h5>
                   <a href="mailto:hello@evertold.com" className="text-[13px] text-[#55624C] font-bold hover:text-[#2C3E2D] block mt-0.5">
                     hello@evertold.com
                   </a>
@@ -136,7 +166,7 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h5 className="text-[11px] font-bold uppercase tracking-wider text-[#7E8B77]">Call Us</h5>
+                  <h5 className="text-[11px] font-bold uppercase tracking-wider text-[#4A5546]">Call Us</h5>
                   <a href="tel:+498912345678" className="text-[13px] text-[#55624C] font-bold hover:text-[#2C3E2D] block mt-0.5">
                     +49 89 1234 5678
                   </a>
@@ -152,7 +182,7 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h5 className="text-[11px] font-bold uppercase tracking-wider text-[#7E8B77]">Visit Us</h5>
+                  <h5 className="text-[11px] font-bold uppercase tracking-wider text-[#4A5546]">Visit Us</h5>
                   <span className="text-[13px] text-[#55624C] font-bold block mt-0.5">
                     Munich, Germany
                   </span>
@@ -167,7 +197,7 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h5 className="text-[11px] font-bold uppercase tracking-wider text-[#7E8B77]">Support Hours</h5>
+                  <h5 className="text-[11px] font-bold uppercase tracking-wider text-[#4A5546]">Support Hours</h5>
                   <span className="text-[13px] text-[#55624C] font-bold block mt-0.5">
                     Mon – Fri, 9:00 AM – 6:00 PM (CET)
                   </span>
@@ -184,97 +214,100 @@ export default function ContactPage() {
               <svg className="w-7 h-7 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v18M3 12h18M12 3a9 9 0 110 18 9 9 0 010-18z" />
               </svg>
-              <h3 className="font-serif text-[20px] text-[#2C3E2D] font-medium mt-4 mb-2.5">
+              <h3 className="font-serif text-[20px] text-[#2C3E2D] font-bold mt-4 mb-2.5">
                 We serve families <br />
                 across Europe <br />
                 and beyond.
               </h3>
-              <div className="w-8 h-[1px] bg-[#E8E1DA] my-1"></div>
+              <div className="w-8 h-[2px] bg-[#D5CDCE] my-1"></div>
               <p className="text-[12px] text-[#4A5546] font-bold leading-relaxed px-2 mt-2">
-                No matter where you are, you can create a legacy that transcends generations.
+                No matter where you are,<br />
+                you can create a legacy that<br />
+                transcends generations.
               </p>
             </div>
             
-            {/* Dotted Map Graphic (SVG) with Location Pins */}
+            {/* Dotted Map Graphic with Location Pins */}
             <div className="w-full h-[180px] my-6 relative flex items-center justify-center overflow-hidden">
-              <svg className="w-full h-full text-[#D5CDCE]" viewBox="0 0 200 100" fill="currentColor" opacity="0.4">
-                {/* World map representation using simple styled dots */}
-                <circle cx="20" cy="30" r="1.5" />
-                <circle cx="30" cy="25" r="1.5" />
-                <circle cx="40" cy="35" r="1.5" />
-                <circle cx="35" cy="45" r="1.5" />
-                <circle cx="45" cy="55" r="1.5" />
-                
-                {/* Europe Dot Area */}
-                <circle cx="95" cy="22" r="1.5" />
-                <circle cx="100" cy="20" r="1.5" />
-                <circle cx="105" cy="25" r="1.5" />
-                <circle cx="102" cy="30" r="1.5" />
-                <circle cx="108" cy="35" r="1.5" />
-                <circle cx="112" cy="22" r="1.5" />
-                <circle cx="115" cy="28" r="1.5" />
-                <circle cx="120" cy="32" r="1.5" />
-                <circle cx="102" cy="18" r="1.5" />
-                <circle cx="98" cy="26" r="1.5" />
-                <circle cx="92" cy="28" r="1.5" />
-                
-                {/* Asia/Other Dot Area */}
-                <circle cx="150" cy="25" r="1.5" />
-                <circle cx="160" cy="30" r="1.5" />
-                <circle cx="155" cy="40" r="1.5" />
-                <circle cx="165" cy="45" r="1.5" />
-                <circle cx="170" cy="35" r="1.5" />
-                <circle cx="175" cy="50" r="1.5" />
-                
-                {/* Africa */}
-                <circle cx="100" cy="55" r="1.5" />
-                <circle cx="105" cy="65" r="1.5" />
-                <circle cx="110" cy="60" r="1.5" />
-                <circle cx="115" cy="70" r="1.5" />
-              </svg>
+              <img src="/dotted-map.svg" alt="Map" className="w-[110%] max-w-none opacity-100 object-contain" />
               
               {/* Green Location Pins overlays */}
-              <div className="absolute top-[22%] left-[48%] animate-bounce">
-                <svg className="w-4 h-4 text-[#55624C]" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+              {/* South America */}
+              <div className="absolute top-[65%] left-[25%]">
+                <svg className="w-4 h-4 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                 </svg>
               </div>
-              <div className="absolute top-[32%] left-[51%] animate-pulse">
-                <svg className="w-3.5 h-3.5 text-[#8C9885]" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+              
+              {/* Europe Cluster */}
+              <div className="absolute top-[35%] left-[46%]">
+                <svg className="w-4 h-4 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                 </svg>
               </div>
-              <div className="absolute top-[28%] left-[45%]">
-                <svg className="w-3 h-3 text-[#55624C]/80" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+              <div className="absolute top-[42%] left-[45%]">
+                <svg className="w-3.5 h-3.5 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                 </svg>
               </div>
-              <div className="absolute top-[45%] left-[53%]">
-                <svg className="w-3.5 h-3.5 text-[#55624C]" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+              <div className="absolute top-[38%] left-[49%]">
+                <svg className="w-4 h-4 text-[#8C9885]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+              </div>
+              <div className="absolute top-[45%] left-[51%]">
+                <svg className="w-3.5 h-3.5 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+              </div>
+
+              {/* East Asia */}
+              <div className="absolute top-[45%] left-[73%]">
+                <svg className="w-3.5 h-3.5 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+              </div>
+
+              {/* Australia */}
+              <div className="absolute top-[68%] left-[78%]">
+                <svg className="w-4 h-4 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                 </svg>
               </div>
             </div>
             
             {/* Bottom Testimonial Quote */}
-            <div className="w-full bg-[#EBE4DD]/30 border border-[#EBE4DD] rounded-[6px] p-4 relative">
-              <span className="text-[28px] font-serif text-[#55624C] opacity-40 absolute top-1 left-3 select-none leading-none">“</span>
-              <p className="text-[12px] text-[#2C3E2D] font-bold italic leading-relaxed pt-2 px-3">
-                The team was so kind and patient. They made the entire process simple and incredibly meaningful.
-              </p>
-              <span className="text-[11px] font-bold text-[#55624C] block mt-2">
-                — Anna Müller, Client
-              </span>
+            <div className="w-full pt-5 mt-2 border-t border-[#E8E1DA] flex items-start gap-4 pl-1 pr-2">
+              <span className="text-[42px] font-serif text-[#8C9885] leading-none mt-[-8px]">“</span>
+              <div className="flex flex-col text-left">
+                <p className="text-[13px] text-[#4A5546] font-bold leading-relaxed">
+                  The team was so kind and <br />
+                  patient. They made the <br />
+                  entire process simple and <br />
+                  incredibly meaningful.
+                </p>
+                <span className="text-[13px] font-bold text-[#4A5546] block mt-3">
+                  — Anna Müller, Client
+                </span>
+              </div>
             </div>
           </div>
           
           {/* Column 3: Send Us a Message Form Card */}
-          <div className="bg-white border border-[#E8E1DA] rounded-[8px] p-6 md:p-7 shadow-sm">
-            <h2 className="font-serif text-[24px] text-[#2C3E2D] font-medium mb-1">
+          <div className="bg-white border border-[#E8E1DA] rounded-[8px] p-6 md:p-7 shadow-sm md:w-[120%] relative z-10">
+            <h2 className="font-serif text-[24px] text-[#2C3E2D] font-bold mb-2 text-center">
               Send Us a Message
             </h2>
-            <p className="text-[12px] text-[#5F6A5B] font-bold mb-6">
-              Fill out the form below and we&apos;ll get back to you shortly.
+            <p className="text-[14px] text-[#4A5546] font-bold mb-6 text-center leading-relaxed">
+              Fill out the form below and <br />
+              we&apos;ll get back to you shortly.
             </p>
             
             {submitted ? (
@@ -305,7 +338,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     placeholder="Full Name"
-                    className="w-full bg-[#FBF9F6]/40 border border-[#D5CDCE] rounded-[3px] px-3.5 py-2.5 text-[13px] font-medium text-[#2C3E2D] placeholder-[#7E8B77] focus:outline-none focus:border-[#55624C] focus:bg-white transition-all"
+                    className="w-full bg-[#FBF9F6]/40 border border-[#D5CDCE] rounded-[3px] px-3.5 py-2.5 text-[13px] font-bold text-[#2C3E2D] placeholder-[#7E8B77] focus:outline-none focus:border-[#55624C] focus:bg-white transition-all"
                   />
                 </div>
                 
@@ -317,7 +350,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     placeholder="Email Address"
-                    className="w-full bg-[#FBF9F6]/40 border border-[#D5CDCE] rounded-[3px] px-3.5 py-2.5 text-[13px] font-medium text-[#2C3E2D] placeholder-[#7E8B77] focus:outline-none focus:border-[#55624C] focus:bg-white transition-all"
+                    className="w-full bg-[#FBF9F6]/40 border border-[#D5CDCE] rounded-[3px] px-3.5 py-2.5 text-[13px] font-bold text-[#2C3E2D] placeholder-[#7E8B77] focus:outline-none focus:border-[#55624C] focus:bg-white transition-all"
                   />
                 </div>
                 
@@ -328,7 +361,7 @@ export default function ContactPage() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="Phone Number (Optional)"
-                    className="w-full bg-[#FBF9F6]/40 border border-[#D5CDCE] rounded-[3px] px-3.5 py-2.5 text-[13px] font-medium text-[#2C3E2D] placeholder-[#7E8B77] focus:outline-none focus:border-[#55624C] focus:bg-white transition-all"
+                    className="w-full bg-[#FBF9F6]/40 border border-[#D5CDCE] rounded-[3px] px-3.5 py-2.5 text-[13px] font-bold text-[#2C3E2D] placeholder-[#7E8B77] focus:outline-none focus:border-[#55624C] focus:bg-white transition-all"
                   />
                 </div>
                 
@@ -359,7 +392,7 @@ export default function ContactPage() {
                     required
                     rows="3.5"
                     placeholder="Message"
-                    className="w-full bg-[#FBF9F6]/40 border border-[#D5CDCE] rounded-[3px] px-3.5 py-2.5 text-[13px] font-medium text-[#2C3E2D] placeholder-[#7E8B77] focus:outline-none focus:border-[#55624C] focus:bg-white transition-all resize-none"
+                    className="w-full bg-[#FBF9F6]/40 border border-[#D5CDCE] rounded-[3px] px-3.5 py-2.5 text-[13px] font-bold text-[#2C3E2D] placeholder-[#7E8B77] focus:outline-none focus:border-[#55624C] focus:bg-white transition-all resize-none"
                   ></textarea>
                 </div>
                 
@@ -402,8 +435,8 @@ export default function ContactPage() {
       </section>
 
       {/* Reused Bottom CTA Section */}
-      <section className="bg-white pt-2 pb-20 px-6">
-        <div className="max-w-5xl mx-auto bg-[#F6F4F1] rounded-[8px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-[#E8E1DA] overflow-hidden relative">
+      <section className="pt-2 pb-20 px-6 relative z-10">
+        <div className="max-w-5xl md:max-w-[1092px] mx-auto bg-[#F6F4F1] rounded-[8px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-[#E8E1DA] overflow-hidden relative md:translate-x-[34px]">
           {/* Left background image context (coffee and notebook detail from pricing_hero_desk) */}
           <div className="absolute left-0 top-0 bottom-0 w-1/3 hidden md:block z-0 pointer-events-none opacity-45">
             <Image
