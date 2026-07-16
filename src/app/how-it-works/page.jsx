@@ -1,9 +1,21 @@
 "use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function HowItWorksPage() {
+  const [showVideo, setShowVideo] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024); // tailwind lg breakpoint
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const steps = [
     {
       title: "Create Your Account",
@@ -72,15 +84,41 @@ export default function HowItWorksPage() {
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden bg-[#FBF9F6] pt-12 md:pt-20 lg:pt-32 pb-16 lg:pb-32">
         {/* Right Background Image Placeholder for large screens */}
-        <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[50%] h-full z-0 hidden lg:block">
+        <div className={`absolute right-0 top-0 bottom-0 w-full lg:w-[50%] h-full hidden lg:block z-0`}>
           <div className="relative w-full h-full bg-[#EBE4DD]">
-            <div className="absolute left-0 top-0 bottom-0 w-[300px] bg-gradient-to-r from-[#FBF9F6] to-transparent z-10"></div>
-            <Image src="/hero_how_it_works.png" alt="Grandfather and granddaughter" fill className="object-cover object-center" priority />
+            {/* Smooth left-side gradient overlay that blends the media into the page background (always on top, click-through) */}
+            <div className="absolute left-0 top-0 bottom-0 w-[300px] bg-gradient-to-r from-[#FBF9F6] to-transparent z-10 pointer-events-none"></div>
+
+            {showVideo && !isMobile ? (
+              <div className="w-full h-full relative z-0 overflow-hidden bg-black">
+                <button 
+                  onClick={() => setShowVideo(false)}
+                  className="absolute top-4 right-4 z-30 bg-black/60 hover:bg-black text-white px-3.5 py-2 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-colors shadow-md border border-white/10"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  Close Video
+                </button>
+                <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                  <iframe 
+                    className="w-[135%] h-[135%] absolute left-1/2 top-0 -translate-x-1/2 -translate-y-[5%]"
+                    src="https://www.youtube.com/embed/fYImnOiz2_8?autoplay=1&controls=0&rel=0&modestbranding=1&playsinline=1"
+                    title="Ever Told - A Home for Every Legacy"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            ) : (
+              <Image src="/hero_how_it_works.png" alt="Grandfather and granddaughter" fill className="object-cover object-center" priority />
+            )}
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-          <div className="w-full max-w-2xl lg:max-w-none relative z-20">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 pointer-events-none">
+          <div className="w-full max-w-2xl lg:max-w-none relative z-20 pointer-events-auto">
             <div className="flex items-center gap-4 mb-6">
               <span className="text-[12px] font-extrabold tracking-[0.2em] text-[#55624C] uppercase">How It Works</span>
               <div className="h-[2px] w-12 bg-[#55624C]"></div>
@@ -98,7 +136,7 @@ export default function HowItWorksPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-4">
-              <Link href="/pricing" className="flex items-center gap-2 px-7 py-3.5 bg-[#55624C] hover:bg-[#45503e] text-white text-sm font-semibold uppercase tracking-wider rounded-[5px] shadow-md transition-all duration-300 transform hover:-translate-y-0.5 flex-shrink-0 whitespace-nowrap">
+              <Link href="/contact" className="flex items-center gap-2 px-7 py-3.5 bg-[#55624C] hover:bg-[#45503e] text-white text-sm font-semibold uppercase tracking-wider rounded-[5px] shadow-md transition-all duration-300 transform hover:-translate-y-0.5 flex-shrink-0 whitespace-nowrap">
                 Start Your Legacy
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
@@ -118,7 +156,31 @@ export default function HowItWorksPage() {
 
           {/* Mobile Image Placeholder */}
           <div className="w-full h-[300px] bg-[#EBE4DD] rounded-[8px] flex items-center justify-center lg:hidden relative overflow-hidden">
-            <Image src="/hero_how_it_works.png" alt="Grandfather and granddaughter" fill className="object-cover object-center" priority />
+            {showVideo && isMobile ? (
+              <div className="w-full h-full relative overflow-hidden bg-black">
+                <button 
+                  onClick={() => setShowVideo(false)}
+                  className="absolute top-2 right-2 z-30 bg-black/60 hover:bg-black text-white px-2.5 py-1.5 rounded-full text-[10px] font-semibold flex items-center gap-1 transition-colors shadow-md border border-white/10"
+                >
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  Close
+                </button>
+                <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                  <iframe 
+                    className="w-[145%] h-[145%] absolute left-1/2 top-0 -translate-x-1/2 -translate-y-[5%]"
+                    src="https://www.youtube.com/embed/fYImnOiz2_8?autoplay=1&controls=0&rel=0&modestbranding=1&playsinline=1"
+                    title="Ever Told - A Home for Every Legacy"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            ) : (
+              <Image src="/hero_how_it_works.png" alt="Grandfather and granddaughter" fill className="object-cover object-center" priority />
+            )}
           </div>
         </div>
       </section>
@@ -234,7 +296,7 @@ export default function HowItWorksPage() {
             </div>
 
             <div className="flex flex-col gap-4 w-full md:w-auto min-w-[200px]">
-              <Link href="/pricing" className="w-full bg-[#55624C] text-white text-center py-3.5 rounded-[3px] text-[13px] font-medium hover:bg-[#4A5546] transition-colors flex items-center justify-center gap-2">
+              <Link href="/contact" className="w-full bg-[#55624C] text-white text-center py-3.5 rounded-[3px] text-[13px] font-medium hover:bg-[#4A5546] transition-colors flex items-center justify-center gap-2">
                 Begin Your Legacy
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>

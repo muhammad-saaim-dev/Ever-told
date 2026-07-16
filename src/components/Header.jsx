@@ -54,7 +54,7 @@ export default function Header() {
               <span className="font-serif text-2xl font-medium tracking-[0.15em] text-[#2C3E2D]">
                 EVER TOLD
               </span>
-              <span className="text-[12px] text-[#7E8B77] font-serif font-medium tracking-wide mt-0.5 leading-none">
+              <span className="text-[14px] text-[#7E8B77] font-serif font-bold tracking-wide mt-0.5 leading-none">
                 A Home for Every Legacy
               </span>
             </div>
@@ -143,7 +143,7 @@ export default function Header() {
           {/* CTAs */}
           <div className="flex items-center gap-4.5 pt-4 md:pt-0 border-t border-[#EBE4DD] md:border-t-0">
             <Link
-              href="#begin"
+              href="/contact"
               onClick={() => setIsOpen(false)}
               className="px-5 py-2.5 bg-[#55624C] hover:bg-[#45503e] text-white text-[13px] font-semibold rounded-[5px] transition-all duration-200 text-center flex-1 md:flex-initial"
             >

@@ -152,7 +152,7 @@ export default function Testimonial() {
             
             <div className="w-full space-y-4">
               <Link
-                href="#begin"
+                href="/contact"
                 className="w-full flex items-center justify-center gap-2 py-3 bg-white text-[#55624C] hover:bg-[#EBE4DD] text-xs font-semibold uppercase tracking-wider rounded-lg shadow-sm transition-all duration-300"
               >
                 Begin Your Legacy

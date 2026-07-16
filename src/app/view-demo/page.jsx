@@ -402,7 +402,7 @@ export default function ViewDemoPage() {
 
           <div className="flex flex-col items-center gap-3 w-full md:w-auto md:mr-12 lg:mr-24 shrink-0">
             <Link
-              href="/pricing"
+              href="/contact"
               className="w-full md:w-auto bg-[#55624C] text-white px-6 py-3.5 rounded-[3px] text-[13px] font-medium flex items-center justify-center gap-2 hover:bg-[#4A5546] transition-colors whitespace-nowrap"
             >
               Begin Your Legacy
