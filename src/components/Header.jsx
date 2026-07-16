@@ -71,12 +71,7 @@ export default function Header() {
           >
             How It Works
           </Link>
-          <Link
-            href="#packages"
-            className="text-[13px] font-semibold text-[#2C3E2D] hover:text-[#55624C] transition-colors py-1"
-          >
-            Packages
-          </Link>
+
           <Link
             href="/pricing"
             className={`text-[13px] font-semibold transition-colors py-1 ${
@@ -107,12 +102,7 @@ export default function Header() {
           >
             Contact Us
           </Link>
-          <div className="relative group cursor-pointer flex items-center text-[13px] font-semibold text-[#2C3E2D] hover:text-[#55624C] transition-colors">
-            Resources
-            <svg className="w-3 h-3 ml-1 mt-0.5 opacity-80" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-            </svg>
-          </div>
+
         </nav>
 
         {/* CTAs */}
