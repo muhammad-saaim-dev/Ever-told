@@ -116,7 +116,7 @@ export default function Footer() {
           </div>
 
           {/* Right Column */}
-          <div className="flex flex-col items-center justify-center pt-6 lg:pt-0 lg:pl-6 max-w-[140px]">
+          <div className="flex flex-col items-center justify-center pt-6 lg:pt-0 lg:pl-6 w-full lg:max-w-[140px]">
             <span className="text-[10px] text-[#4A5546] font-sans font-bold tracking-wider uppercase text-center mt-3 leading-relaxed">
               Serving families across Europe and beyond.
             </span>

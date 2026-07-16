@@ -72,7 +72,7 @@ export default function HowItWorks() {
                 <h3 className="font-serif text-sm md:text-base font-bold text-[#2C3E2D] mb-1.5">
                   {step.number}. {step.title}
                 </h3>
-                <p className="text-[11px] md:text-xs text-[#4A5546] leading-relaxed max-w-[220px] font-sans font-medium">
+                <p className="text-[11px] md:text-xs text-[#4A5546] leading-relaxed max-w-[280px] lg:max-w-[220px] font-sans font-medium">
                   {step.description}
                 </p>
               </div>

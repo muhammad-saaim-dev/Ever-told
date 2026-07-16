@@ -113,7 +113,7 @@ export default function Pricing() {
                 
                 {/* Package Name & Subtitle */}
                 <h3 className="font-serif text-2xl font-bold text-[#2C3E2D] mb-2">{pkg.name}</h3>
-                <p className="text-xs text-[#3D473B] text-center min-h-[36px] max-w-[220px] font-sans font-semibold leading-relaxed mb-5">
+                <p className="text-xs text-[#3D473B] text-center min-h-[36px] max-w-[280px] md:max-w-[220px] font-sans font-semibold leading-relaxed mb-5">
                   {pkg.subtitle}
                 </p>
                 {/* Package Icon */}
@@ -161,8 +161,8 @@ export default function Pricing() {
         </div>
 
         {/* Footer Guarantee */}
-        <div className="flex items-center justify-center gap-2 mt-12 text-[#4A5546] text-sm font-sans font-semibold">
-          <svg className="w-5 h-5 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mt-12 text-[#4A5546] text-sm font-sans font-semibold text-center sm:text-left">
+          <svg className="w-5 h-5 text-[#55624C] shrink-0" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
           </svg>

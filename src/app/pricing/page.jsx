@@ -28,7 +28,7 @@ export default function PricingPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-10">
-              <div className="flex items-start gap-3 max-w-[200px]">
+              <div className="flex items-start gap-3 w-full sm:max-w-[200px]">
                 <div className="mt-1 text-[#55624C]">
                   {/* Shield Check Icon */}
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
@@ -37,7 +37,7 @@ export default function PricingPage() {
                 </div>
                 <span className="text-[13px] text-[#4A5546] font-semibold leading-snug">Your memories are safe and secure</span>
               </div>
-              <div className="flex items-start gap-3 max-w-[200px]">
+              <div className="flex items-start gap-3 w-full sm:max-w-[200px]">
                 <div className="mt-1 text-[#55624C]">
                   {/* Heart Icon */}
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
@@ -284,15 +284,15 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full lg:w-4/5">
           <div className="flex flex-col md:flex-row items-center md:items-stretch justify-start gap-12 lg:gap-20">
             {/* Security Text */}
-            <div className="max-w-[280px] flex flex-col justify-center">
-              <div className="flex items-center gap-5 mb-5">
+            <div className="w-full md:max-w-[280px] flex flex-col justify-center items-center md:items-start text-center md:text-left">
+              <div className="flex flex-col sm:flex-row items-center gap-5 mb-5">
                 <div className="w-[60px] h-[60px] rounded-full bg-[#F2EDE7] flex items-center justify-center text-[#55624C] shrink-0">
                   <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.2" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12c0-1.5 1.5-3 3-3s3 1.5 3 3-1.5 3-3 3-3-1.5-3-3z" />
                   </svg>
                 </div>
-                <h3 className="text-[20px] font-serif font-bold text-[#2C3E2D] leading-snug">Your memories are <br />our responsibility.</h3>
+                <h3 className="text-[20px] font-serif font-bold text-[#2C3E2D] leading-snug">Your memories are <br className="hidden sm:block" />our responsibility.</h3>
               </div>
               <p className="text-[14px] font-medium text-[#4A5546] leading-relaxed mb-5 pr-2">
                 We use industry-leading security to keep your stories safe for generations to come.
@@ -343,18 +343,18 @@ export default function PricingPage() {
       <section className="w-full relative z-20 pb-16">
         <div className="max-w-7xl mx-auto px-6 -mt-12 lg:-mt-20">
           <div className="bg-[#F6F4F1] border border-[#E8E1DA] rounded-[3px] py-6 px-8 md:py-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm relative z-20">
-            <div className="flex items-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6">
               <div className="text-[#55624C] shrink-0 opacity-80">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
+                <svg className="w-10 h-10 mx-auto sm:mx-0" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                 </svg>
               </div>
               <div>
-                <h3 className="text-[26px] font-serif font-bold text-[#2C3E2D] mb-2">Need help choosing the right package?</h3>
-                <p className="text-[15px] font-medium text-[#4A5546]">We're here to help you create the perfect legacy.</p>
+                <h3 className="text-xl md:text-[26px] font-serif font-bold text-[#2C3E2D] mb-2">Need help choosing the right package?</h3>
+                <p className="text-sm md:text-[15px] font-medium text-[#4A5546]">We're here to help you create the perfect legacy.</p>
               </div>
             </div>
-            <button className="px-6 py-3.5 bg-[#55624C] text-white font-semibold text-[13px] rounded-[3px] hover:bg-[#45503e] transition-colors duration-300 flex items-center gap-2 whitespace-nowrap shadow-sm">
+            <button className="w-full md:w-auto px-6 py-3.5 bg-[#55624C] text-white font-semibold text-[13px] rounded-[3px] hover:bg-[#45503e] transition-colors duration-300 flex items-center justify-center gap-2 whitespace-nowrap shadow-sm">
               Talk to a Legacy Advisor
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
             </button>

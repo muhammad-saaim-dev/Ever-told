@@ -311,7 +311,7 @@ export default function LegacyGalleryPage() {
       {/* Reused Bottom CTA Section */}
       <section className="bg-white pt-2 pb-24 px-6">
         <div className="max-w-5xl mx-auto bg-[#F6F4F1] rounded-[8px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-[#E8E1DA]">
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6">
             <svg
               className="w-16 h-16 md:w-20 md:h-20 text-[#8C9885] flex-shrink-0"
               viewBox="0 0 24 24"
@@ -338,10 +338,10 @@ export default function LegacyGalleryPage() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center gap-3 md:mr-12 lg:mr-24">
+          <div className="flex flex-col items-center gap-3 w-full md:w-auto md:mr-12 lg:mr-24">
             <Link
               href="/pricing"
-              className="bg-[#55624C] flex-shrink-0 text-white px-6 py-3.5 rounded-[3px] text-[13px] font-medium flex items-center gap-2 hover:bg-[#4A5546] transition-colors whitespace-nowrap"
+              className="w-full md:w-auto bg-[#55624C] flex-shrink-0 text-white px-6 py-3.5 rounded-[3px] text-[13px] font-medium flex items-center justify-center gap-2 hover:bg-[#4A5546] transition-colors whitespace-nowrap"
             >
               Begin Your Legacy
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

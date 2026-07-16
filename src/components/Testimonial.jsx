@@ -106,7 +106,7 @@ export default function Testimonial() {
                 </svg>
               </div>
               <h4 className="font-serif text-base font-bold text-[#2C3E2D] mb-2">30-Day Peace of Mind</h4>
-              <p className="text-xs text-[#5F6A5B] leading-relaxed max-w-[220px] font-sans font-medium">
+              <p className="text-xs text-[#5F6A5B] leading-relaxed max-w-[280px] md:max-w-[220px] font-sans font-medium">
                 Not sure yet? Take 30 days to explore and experience Ever Told.
               </p>
             </div>
@@ -122,7 +122,7 @@ export default function Testimonial() {
                 </svg>
               </div>
               <h4 className="font-serif text-base font-bold text-[#2C3E2D] mb-2">Secure & Private</h4>
-              <p className="text-xs text-[#5F6A5B] leading-relaxed max-w-[220px] font-sans font-medium">
+              <p className="text-xs text-[#5F6A5B] leading-relaxed max-w-[280px] md:max-w-[220px] font-sans font-medium">
                 We use bank-level security to keep your story safe.
               </p>
             </div>
@@ -137,7 +137,7 @@ export default function Testimonial() {
                 </svg>
               </div>
               <h4 className="font-serif text-base font-bold text-[#2C3E2D] mb-2">Here to Help</h4>
-              <p className="text-xs text-[#5F6A5B] leading-relaxed max-w-[220px] font-sans font-medium">
+              <p className="text-xs text-[#5F6A5B] leading-relaxed max-w-[280px] md:max-w-[220px] font-sans font-medium">
                 Our legacy advisors are here whenever you need us.
               </p>
             </div>
@@ -146,7 +146,7 @@ export default function Testimonial() {
 
           {/* CTA Box Column */}
           <div className="lg:col-span-4 bg-[#55624C] rounded-2xl p-8 flex flex-col justify-between items-center lg:items-start text-center lg:text-left text-white shadow-md">
-            <h3 className="font-serif text-lg md:text-xl font-medium leading-relaxed max-w-[240px] mb-6">
+            <h3 className="font-serif text-lg md:text-xl font-medium leading-relaxed max-w-[280px] lg:max-w-[240px] mb-6">
               Ready to create a legacy that lasts forever?
             </h3>
             
