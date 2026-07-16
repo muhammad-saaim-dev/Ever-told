@@ -54,7 +54,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto px-6 relative z-10 pt-12 md:pt-16 pb-32 md:pb-48">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 pt-12 md:pt-16 pb-32 md:pb-48">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Column - Text Content */}
             <div className="lg:col-span-6 flex flex-col items-start">
@@ -131,7 +131,7 @@ export default function ContactPage() {
 
       {/* Main 3-Column Content Section */}
       <section className="relative z-20 -mt-12 md:-mt-20 pb-4 md:pb-6">
-        <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0">
           
           {/* Column 1: Let's Start a Conversation */}
           <div className="bg-white border border-[#E8E1DA] rounded-[8px] p-6 md:p-7 shadow-sm flex flex-col">
@@ -228,58 +228,54 @@ export default function ContactPage() {
             </div>
             
             {/* Dotted Map Graphic with Location Pins */}
-            <div className="w-full h-[180px] my-6 relative flex items-center justify-center overflow-hidden">
-              <img src="/dotted-map.svg" alt="Map" className="w-[110%] max-w-none opacity-100 object-contain" />
-              
-              {/* Green Location Pins overlays */}
-              {/* South America */}
-              <div className="absolute top-[65%] left-[25%]">
-                <svg className="w-4 h-4 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                </svg>
-              </div>
-              
-              {/* Europe Cluster */}
-              <div className="absolute top-[35%] left-[46%]">
-                <svg className="w-4 h-4 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                </svg>
-              </div>
-              <div className="absolute top-[42%] left-[45%]">
-                <svg className="w-3.5 h-3.5 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                </svg>
-              </div>
-              <div className="absolute top-[38%] left-[49%]">
-                <svg className="w-4 h-4 text-[#8C9885]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                </svg>
-              </div>
-              <div className="absolute top-[45%] left-[51%]">
-                <svg className="w-3.5 h-3.5 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                </svg>
-              </div>
+            <div className="w-[110%] my-6 relative flex items-center justify-center -ml-[5%]">
+              <div className="relative w-full">
+                <img src="/dotted-map.svg" alt="Map" className="w-full h-auto opacity-100" />
+                
+                {/* Green Location Pins overlays */}
+                {/* South America */}
+                <div className="absolute top-[62%] left-[30%] -translate-x-1/2 -translate-y-1/2">
+                  <svg className="w-6 h-6 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
+                </div>
+                
+                {/* Europe Cluster */}
+                <div className="absolute top-[35%] left-[46%] -translate-x-1/2 -translate-y-1/2">
+                  <svg className="w-6 h-6 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
+                </div>
+                <div className="absolute top-[42%] left-[45%] -translate-x-1/2 -translate-y-1/2">
+                  <svg className="w-5 h-5 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
+                </div>
+                <div className="absolute top-[38%] left-[49%] -translate-x-1/2 -translate-y-1/2">
+                  <svg className="w-6 h-6 text-[#8C9885]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
+                </div>
+                <div className="absolute top-[45%] left-[51%] -translate-x-1/2 -translate-y-1/2">
+                  <svg className="w-5 h-5 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
+                </div>
+                
+                {/* East Asia */}
+                <div className="absolute top-[40%] left-[71%] -translate-x-1/2 -translate-y-1/2">
+                  <svg className="w-5 h-5 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
+                </div>
+                
 
-              {/* East Asia */}
-              <div className="absolute top-[45%] left-[73%]">
-                <svg className="w-3.5 h-3.5 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                </svg>
-              </div>
-
-              {/* Australia */}
-              <div className="absolute top-[68%] left-[78%]">
-                <svg className="w-4 h-4 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                </svg>
               </div>
             </div>
             
@@ -301,7 +297,7 @@ export default function ContactPage() {
           </div>
           
           {/* Column 3: Send Us a Message Form Card */}
-          <div className="bg-white border border-[#E8E1DA] rounded-[8px] p-6 md:p-7 shadow-sm md:w-[120%] relative z-10">
+          <div className="bg-white border border-[#E8E1DA] rounded-[8px] p-6 md:p-7 shadow-sm relative z-10">
             <h2 className="font-serif text-[24px] text-[#2C3E2D] font-bold mb-2 text-center">
               Send Us a Message
             </h2>
@@ -435,8 +431,9 @@ export default function ContactPage() {
       </section>
 
       {/* Reused Bottom CTA Section */}
-      <section className="pt-2 pb-20 px-6 relative z-10">
-        <div className="max-w-5xl md:max-w-[1092px] mx-auto bg-[#F6F4F1] rounded-[8px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-[#E8E1DA] overflow-hidden relative md:translate-x-[34px]">
+      <section className="pt-2 pb-20 relative z-10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="w-full bg-[#F6F4F1] rounded-[8px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-[#E8E1DA] overflow-hidden relative">
           {/* Left background image context (coffee and notebook detail from pricing_hero_desk) */}
           <div className="absolute left-0 top-0 bottom-0 w-1/3 hidden md:block z-0 pointer-events-none opacity-45">
             <Image
@@ -476,6 +473,7 @@ export default function ContactPage() {
             >
               View Pricing Plans →
             </Link>
+          </div>
           </div>
         </div>
       </section>

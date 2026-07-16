@@ -184,9 +184,9 @@ export default function ViewDemoPage() {
       </section>
 
       {/* 2 & 3. Highlight Banner & What's Inside Section */}
-      <section className="w-full bg-white border-t border-[#EBE4DD] pb-10 px-6">
+      <section className="w-full bg-white border-t border-[#EBE4DD] pb-10">
         {/* Highlight Banner (pulled up to overlap hero) */}
-        <div className="max-w-5xl mx-auto relative z-20 -mt-2 md:-mt-4 lg:-mt-8 mb-8 md:mb-12">
+        <div className="max-w-7xl mx-auto px-6 relative z-20 -mt-2 md:-mt-4 lg:-mt-8 mb-8 md:mb-12">
           <div className="bg-[#F6F4F1] border border-[#E8E1DA] rounded-[8px] p-6 md:p-8 flex flex-col md:flex-row items-center md:items-start gap-6 shadow-sm">
             <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-[#E8E1DA] shrink-0 text-[#55624C]">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
@@ -204,7 +204,7 @@ export default function ViewDemoPage() {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
             <span className="text-[12px] font-extrabold tracking-[0.2em] text-[#55624C] uppercase">
@@ -273,8 +273,8 @@ export default function ViewDemoPage() {
       </section>
 
       {/* 4. Experience the Demo (Slider) */}
-      <section id="demo-carousel" className="w-full bg-white pt-0 pb-20 px-6 scroll-mt-20">
-        <div className="max-w-6xl mx-auto relative">
+      <section id="demo-carousel" className="w-full bg-white pt-0 pb-20 scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-6 relative">
           {/* Header */}
           <div className="text-center space-y-3 mb-16">
             <span className="text-[12px] font-extrabold tracking-[0.2em] text-[#55624C] uppercase block">
@@ -336,8 +336,9 @@ export default function ViewDemoPage() {
       </section>
 
       {/* 5. Client Testimonial Quote Banner */}
-      <section className="bg-white py-2 px-6">
-        <div className="max-w-6xl mx-auto relative rounded-[8px] overflow-hidden bg-[#F6F4F1] min-h-[220px] md:min-h-[260px] flex items-center border border-[#E8E1DA]">
+      <section className="bg-white py-2">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="w-full relative rounded-[8px] overflow-hidden bg-[#F6F4F1] min-h-[220px] md:min-h-[260px] flex items-center border border-[#E8E1DA]">
           {/* Background image positioned to the right */}
           <div className="absolute right-0 top-0 bottom-0 w-full md:w-[50%] z-0">
             {/* Gradient overlay to fade image seamlessly */}
@@ -363,13 +364,15 @@ export default function ViewDemoPage() {
                 &mdash; Sarah Thompson, Daughter
               </span>
             </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* 6. Bottom Pre-Footer CTA */}
-      <section className="bg-white pt-8 pb-24 px-6">
-        <div className="max-w-6xl mx-auto bg-[#F6F4F1] rounded-[8px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-[#E8E1DA]">
+      <section className="bg-white pt-8 pb-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="w-full bg-[#F6F4F1] rounded-[8px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-[#E8E1DA]">
           <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6">
             <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-[#D5CDCE] bg-white flex items-center justify-center text-[#55624C] flex-shrink-0 shadow-sm">
               <svg className="w-8 h-8 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="1.2" viewBox="0 0 24 24">
@@ -403,6 +406,7 @@ export default function ViewDemoPage() {
             >
               View Pricing Plans →
             </Link>
+            </div>
           </div>
         </div>
       </section>

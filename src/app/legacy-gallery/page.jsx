@@ -114,7 +114,7 @@ export default function LegacyGalleryPage() {
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
           <div className="w-full max-w-2xl lg:max-w-none relative z-20">
             <div className="mb-6">
               <span className="text-[12px] font-extrabold tracking-[0.2em] text-[#55624C] uppercase">
@@ -168,7 +168,7 @@ export default function LegacyGalleryPage() {
 
       {/* Filter navigation section */}
       <section className="bg-white border-b border-[#EBE4DD] pt-6 sticky top-[71px] z-40">
-        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
           {/* Categories Tab Bar */}
           <div className="flex items-center gap-6 overflow-x-auto scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {categories.map((category) => (
@@ -208,8 +208,8 @@ export default function LegacyGalleryPage() {
       </section>
 
       {/* Stories Grid */}
-      <section className="bg-[#FBF9F6]/30 pt-16 pb-2 px-6">
-        <div className="max-w-5xl mx-auto">
+      <section className="bg-[#FBF9F6]/30 pt-16 pb-2">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {filteredStories.map((story) => (
               <div
@@ -277,8 +277,9 @@ export default function LegacyGalleryPage() {
       </section>
 
       {/* Testimonial Quote Banner */}
-      <section className="bg-white py-2 px-6">
-        <div className="max-w-5xl mx-auto relative rounded-[8px] overflow-hidden bg-[#F6F4F1] min-h-[180px] md:min-h-[220px] flex items-center border border-[#E8E1DA]">
+      <section className="bg-white py-2">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="relative rounded-[8px] overflow-hidden bg-[#F6F4F1] min-h-[180px] md:min-h-[220px] flex items-center border border-[#E8E1DA]">
           {/* Background image positioned to the right */}
           <div className="absolute right-0 top-0 bottom-0 w-full md:w-[65%] z-0">
             {/* Gradient overlay to fade image seamlessly into the left background */}
@@ -306,11 +307,13 @@ export default function LegacyGalleryPage() {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Reused Bottom CTA Section */}
-      <section className="bg-white pt-2 pb-24 px-6">
-        <div className="max-w-5xl mx-auto bg-[#F6F4F1] rounded-[8px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-[#E8E1DA]">
+      <section className="bg-white pt-2 pb-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="w-full bg-[#F6F4F1] rounded-[8px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-[#E8E1DA]">
           <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6">
             <svg
               className="w-16 h-16 md:w-20 md:h-20 text-[#8C9885] flex-shrink-0"
@@ -355,6 +358,7 @@ export default function LegacyGalleryPage() {
               View Pricing Plans →
             </Link>
           </div>
+        </div>
         </div>
       </section>
     </div>

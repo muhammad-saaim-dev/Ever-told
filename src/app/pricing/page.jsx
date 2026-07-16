@@ -1,7 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function PricingPage() {
+  const [selectedPackage, setSelectedPackage] = useState(null);
+
   return (
     <div className="min-h-screen bg-[#FBF9F6] font-sans selection:bg-[#55624C] selection:text-white pb-0">
       {/* 1. Pricing Hero Section */}
@@ -83,11 +88,18 @@ export default function PricingPage() {
       </section>
 
       {/* 2. Pricing Cards Section */}
-      <section className="relative w-full -mt-10 lg:-mt-24 z-20 px-6">
-        <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 lg:gap-6 items-end">
+      <section className="relative w-full -mt-10 lg:-mt-24 z-20">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 lg:gap-6 items-end">
           
           {/* Card 1: Essential */}
-          <div className="bg-[#FCFDFB] rounded-[3px] border border-[#E8E1DA] p-8 lg:p-10 flex flex-col relative transition-all duration-300 hover:shadow-lg shadow-sm w-full md:w-full mx-auto md:mx-0">
+          <div 
+            onClick={() => setSelectedPackage('essential')}
+            className={`bg-[#FCFDFB] rounded-[3px] border p-8 lg:p-10 flex flex-col relative transition-all duration-500 w-full md:w-full mx-auto md:mx-0 cursor-pointer group ${
+              selectedPackage === 'essential'
+                ? "border-[#55624C] ring-1 ring-[#55624C] shadow-[0_8px_30px_rgba(85,98,76,0.15)] scale-[1.02] z-10 md:-translate-y-4"
+                : "border-[#E8E1DA] hover:shadow-lg shadow-sm hover:border-[#55624C]/40 hover:-translate-y-1"
+            }`}
+          >
             <div className="text-center mb-8">
               <h2 className="text-2xl font-serif font-medium text-[#2C3E2D] mb-3">Essential</h2>
               <p className="text-[13px] font-semibold text-[#4A5546] leading-relaxed mx-auto max-w-[200px]">A beautiful start to preserve your story.</p>
@@ -118,13 +130,24 @@ export default function PricingPage() {
               ))}
             </ul>
             
-            <button className="w-full py-3.5 bg-transparent border border-[#55624C] text-[#55624C] font-semibold text-[13px] rounded-[3px] hover:bg-[#55624C] hover:text-white transition-colors duration-300">
-              Choose Essential
+            <button className={`w-full py-3.5 font-semibold text-[13px] rounded-[3px] transition-all duration-500 ${
+              selectedPackage === 'essential'
+                ? "bg-[#55624C] text-white shadow-md transform scale-[1.02]"
+                : "bg-transparent border border-[#55624C] text-[#55624C] group-hover:bg-[#F2EDE7] hover:bg-[#55624C] hover:text-white"
+            }`}>
+              {selectedPackage === 'essential' ? 'Selected' : 'Choose Essential'}
             </button>
           </div>
 
           {/* Card 2: Signature (Most Popular) */}
-          <div className="bg-[#FCFDFB] rounded-[3px] border border-[#55624C] pt-0 pb-8 px-8 lg:px-10 flex flex-col relative transition-all duration-300 shadow-xl w-full mx-auto md:mx-0 transform md:-translate-y-4 md:z-10">
+          <div 
+            onClick={() => setSelectedPackage('signature')}
+            className={`bg-[#FCFDFB] rounded-[3px] border pt-0 pb-8 px-8 lg:px-10 flex flex-col relative transition-all duration-500 w-full mx-auto md:mx-0 cursor-pointer group ${
+              selectedPackage === 'signature'
+                ? "border-[#55624C] ring-1 ring-[#55624C] shadow-[0_8px_30px_rgba(85,98,76,0.15)] scale-[1.02] z-10 md:-translate-y-4"
+                : "border-[#E8E1DA] hover:shadow-lg shadow-sm hover:border-[#55624C]/40 hover:-translate-y-1"
+            }`}
+          >
             {/* Top Banner */}
             <div className="bg-[#55624C] text-white text-center py-2 -mx-8 lg:-mx-10 mb-8 rounded-t-[2px]">
               <span className="text-[10px] font-bold tracking-[0.2em] uppercase">Most Popular</span>
@@ -161,13 +184,24 @@ export default function PricingPage() {
               ))}
             </ul>
             
-            <button className="w-full py-3.5 bg-[#55624C] text-white font-semibold text-[13px] rounded-[3px] hover:bg-[#45503e] transition-colors duration-300 shadow-md">
-              Choose Signature
+            <button className={`w-full py-3.5 font-semibold text-[13px] rounded-[3px] transition-all duration-500 ${
+              selectedPackage === 'signature'
+                ? "bg-[#55624C] text-white shadow-md transform scale-[1.02]"
+                : "bg-transparent border border-[#55624C] text-[#55624C] group-hover:bg-[#F2EDE7] hover:bg-[#55624C] hover:text-white"
+            }`}>
+              {selectedPackage === 'signature' ? 'Selected' : 'Choose Signature'}
             </button>
           </div>
 
           {/* Card 3: Legacy */}
-          <div className="bg-[#FCFDFB] rounded-[3px] border border-[#E8E1DA] p-8 lg:p-10 flex flex-col relative transition-all duration-300 hover:shadow-lg shadow-sm w-full md:w-full mx-auto md:mx-0">
+          <div 
+            onClick={() => setSelectedPackage('legacy')}
+            className={`bg-[#FCFDFB] rounded-[3px] border p-8 lg:p-10 flex flex-col relative transition-all duration-500 w-full md:w-full mx-auto md:mx-0 cursor-pointer group ${
+              selectedPackage === 'legacy'
+                ? "border-[#55624C] ring-1 ring-[#55624C] shadow-[0_8px_30px_rgba(85,98,76,0.15)] scale-[1.02] z-10 md:-translate-y-4"
+                : "border-[#E8E1DA] hover:shadow-lg shadow-sm hover:border-[#55624C]/40 hover:-translate-y-1"
+            }`}
+          >
             <div className="text-center mb-8">
               <h2 className="text-2xl font-serif font-medium text-[#2C3E2D] mb-3">Legacy</h2>
               <p className="text-[13px] font-semibold text-[#4A5546] leading-relaxed mx-auto max-w-[220px]">The most comprehensive way to preserve your life story.</p>
@@ -200,8 +234,12 @@ export default function PricingPage() {
               ))}
             </ul>
             
-            <button className="w-full py-3.5 bg-transparent border border-[#55624C] text-[#55624C] font-semibold text-[13px] rounded-[3px] hover:bg-[#55624C] hover:text-white transition-colors duration-300">
-              Choose Legacy
+            <button className={`w-full py-3.5 font-semibold text-[13px] rounded-[3px] transition-all duration-500 ${
+              selectedPackage === 'legacy'
+                ? "bg-[#55624C] text-white shadow-md transform scale-[1.02]"
+                : "bg-transparent border border-[#55624C] text-[#55624C] group-hover:bg-[#F2EDE7] hover:bg-[#55624C] hover:text-white"
+            }`}>
+              {selectedPackage === 'legacy' ? 'Selected' : 'Choose Legacy'}
             </button>
           </div>
 
@@ -209,7 +247,7 @@ export default function PricingPage() {
       </section>
 
       {/* 3. Compare Features Section */}
-      <section className="w-full max-w-5xl mx-auto px-6 pt-24 pb-20">
+      <section className="w-full max-w-7xl mx-auto px-6 pt-24 pb-20">
         <div className="text-center mb-12">
           <h2 className="text-[28px] md:text-3xl font-serif font-medium text-[#2C3E2D] mb-3">Compare Features</h2>
           <div className="w-14 h-[1px] bg-[#55624C] mx-auto opacity-80"></div>
@@ -281,7 +319,7 @@ export default function PricingPage() {
             <div className="absolute inset-y-0 left-0 w-[400px] bg-gradient-to-r from-[#FBF9F6] via-[#FBF9F6]/90 to-transparent" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full lg:w-4/5">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
           <div className="flex flex-col md:flex-row items-center md:items-stretch justify-start gap-12 lg:gap-20">
             {/* Security Text */}
             <div className="w-full md:max-w-[280px] flex flex-col justify-center items-center md:items-start text-center md:text-left">

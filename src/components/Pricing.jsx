@@ -1,4 +1,9 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Pricing() {
+  const [selectedPackage, setSelectedPackage] = useState(null);
   const packages = [
     {
       name: "Essential",
@@ -95,10 +100,11 @@ export default function Pricing() {
           {packages.map((pkg, idx) => (
             <div
               key={idx}
-              className={`relative bg-white rounded-2xl border transition-all duration-300 flex flex-col justify-between overflow-hidden ${
-                pkg.popular 
-                  ? "border-[#55624C] shadow-lg scale-102 z-10 md:-translate-y-2" 
-                  : "border-[#EBE4DD] hover:border-[#55624C]/50 hover:shadow-md"
+              onClick={() => setSelectedPackage(idx)}
+              className={`relative bg-white rounded-2xl border transition-all duration-500 flex flex-col justify-between overflow-hidden cursor-pointer group ${
+                selectedPackage === idx 
+                  ? "border-[#55624C] ring-1 ring-[#55624C] shadow-[0_8px_30px_rgba(85,98,76,0.15)] scale-[1.02] z-10 md:-translate-y-2" 
+                  : "border-[#EBE4DD] hover:border-[#55624C]/40 hover:shadow-lg hover:-translate-y-1"
               }`}
             >
               {/* Popular Badge */}
@@ -147,13 +153,13 @@ export default function Pricing() {
               {/* Button */}
               <div className="p-6 pt-0 w-full">
                 <button
-                  className={`w-full py-3.5 rounded-lg text-xs font-semibold uppercase tracking-widest transition-all duration-300 ${
-                    pkg.popular
-                      ? "bg-[#55624C] text-white hover:bg-[#45503e] shadow-sm hover:shadow-md"
-                      : "bg-[#FBF9F6] text-[#2C3E2D] border border-[#EBE4DD] hover:border-[#55624C] hover:bg-white"
+                  className={`w-full py-3.5 rounded-lg text-xs font-semibold uppercase tracking-widest transition-all duration-500 ${
+                    selectedPackage === idx
+                      ? "bg-[#55624C] text-white shadow-md transform scale-[1.02]"
+                      : "bg-[#FBF9F6] text-[#2C3E2D] border border-[#EBE4DD] group-hover:border-[#55624C]/50 group-hover:bg-[#F2EDE7]"
                   }`}
                 >
-                  {pkg.buttonText}
+                  {selectedPackage === idx ? "Selected" : pkg.buttonText}
                 </button>
               </div>
             </div>
