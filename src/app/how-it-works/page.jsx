@@ -85,32 +85,37 @@ export default function HowItWorksPage() {
               <span className="text-[12px] font-extrabold tracking-[0.2em] text-[#55624C] uppercase">How It Works</span>
               <div className="h-[2px] w-12 bg-[#55624C]"></div>
             </div>
-            
+
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[44px] xl:text-[52px] text-[#2C3E2D] font-serif font-medium leading-[1.15] mb-6">
               <span>Preserving your story</span><br />
               <span className="text-[#7E8B77]">is simple and meaningful.</span>
             </h1>
-            
+
             <div className="w-12 h-[2px] bg-[#55624C] mb-8"></div>
-            
+
             <p className="text-base md:text-[17px] text-[#3D473B] font-semibold leading-relaxed mb-10">
               We guide you through every step to create a beautiful legacy that your family will treasure forever.
             </p>
-            
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 md:gap-5">
-              <Link href="/pricing" className="bg-[#55624C] flex-shrink-0 text-white px-6 py-3.5 rounded-[3px] text-[13px] font-medium flex items-center gap-2 hover:bg-[#4A5546] transition-colors whitespace-nowrap">
+
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-4">
+              <Link href="/pricing" className="flex items-center gap-2 px-7 py-3.5 bg-[#55624C] hover:bg-[#45503e] text-white text-sm font-semibold uppercase tracking-wider rounded-[5px] shadow-md transition-all duration-300 transform hover:-translate-y-0.5 flex-shrink-0 whitespace-nowrap">
                 Start Your Legacy
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
-              <button className="group flex items-center gap-3 text-[#55624C] hover:opacity-80 transition-opacity whitespace-nowrap">
-                <div className="w-14 h-14 rounded-full border-2 border-[#D5CDCE] flex items-center justify-center group-hover:border-[#55624C] transition-colors flex-shrink-0">
-                  <svg className="w-5 h-5 text-[#55624C]" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-                <span className="text-[13px] font-semibold text-[#55624C]">Watch 1-Minute Overview</span>
+              <button 
+                onClick={() => setShowVideo(true)}
+                className="flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-[#2C3E2D] hover:text-[#55624C] transition-colors group whitespace-nowrap"
+              >
+                <span className="w-11 h-11 rounded-full border border-[#EBE4DD] flex items-center justify-center bg-white shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:border-[#55624C]/30 flex-shrink-0">
+                  <svg className="w-3.5 h-3.5 fill-[#2C3E2D] text-[#2C3E2D] ml-0.5 group-hover:fill-[#55624C] group-hover:text-[#55624C] transition-colors" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </span>
+                Watch 1-Minute Overview
               </button>
             </div>
           </div>
-          
+
           {/* Mobile Image Placeholder */}
           <div className="w-full h-[300px] bg-[#EBE4DD] rounded-[8px] flex items-center justify-center lg:hidden relative overflow-hidden">
             <Image src="/hero_how_it_works.png" alt="Grandfather and granddaughter" fill className="object-cover object-center" priority />
@@ -134,10 +139,10 @@ export default function HowItWorksPage() {
             <div className="space-y-12 md:space-y-16 relative">
               {steps.map((step, index) => {
                 const isEven = index % 2 !== 0; // 0, 2, 4 are odds (left text), 1, 3, 5 are evens (right text)
-                
+
                 return (
                   <div key={index} className="flex flex-col md:flex-row items-center justify-center w-full min-h-[220px] py-8 relative">
-                    
+
                     {/* Gap Fill Background (desktop) */}
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[128px] h-[220px] bg-[#FBF9F6] z-0"></div>
 
@@ -146,7 +151,7 @@ export default function HowItWorksPage() {
                     <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 mt-[109px] w-[128px] h-[1px] bg-[#FBF9F6] z-0"></div>
 
                     {/* Left Side (Image or Text Card) */}
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, x: -50 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: false, margin: "-100px" }}
@@ -156,7 +161,7 @@ export default function HowItWorksPage() {
                       {!isEven ? (
                         // Image (Left side)
                         <div className="w-full max-w-[540px] h-[260px] bg-[#EBE4DD] rounded-[12px] flex items-center justify-center shadow-sm relative overflow-hidden">
-                           <Image src={step.image} alt={step.title} fill className="object-cover" />
+                          <Image src={step.image} alt={step.title} fill className="object-cover" />
                         </div>
                       ) : (
                         // Text Content (Left side)
@@ -178,30 +183,30 @@ export default function HowItWorksPage() {
                     </div>
 
                     {/* Right Side (Text Card or Image) */}
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, x: 50 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: false, margin: "-100px" }}
                       transition={{ duration: 0.6, ease: "easeOut" }}
                       className={`w-full md:w-1/2 flex justify-start md:pl-16 min-w-0 relative z-10 ${!isEven ? "order-1 md:order-none" : "order-2 md:order-none"}`}
                     >
-                       {!isEven ? (
-                         // Text Content (Right side)
-                         <div className="flex items-center gap-6 w-full max-w-[540px] min-h-[260px] bg-[#FBF9F6] border border-[#EBE4DD]/70 rounded-xl md:border-l-0 p-8 md:px-12 shadow-sm">
-                           <div className="w-16 h-16 rounded-full border border-[#EBE4DD] flex items-center justify-center flex-shrink-0 bg-white">
-                             {step.icon}
-                           </div>
-                           <div className="flex-1 text-left">
-                             <h3 className="text-[22px] font-serif font-semibold text-[#2C3E2D] mb-2">{step.title}</h3>
-                             <p className="text-[15px] text-[#5F6A5B] leading-relaxed">{step.description}</p>
-                           </div>
-                         </div>
-                       ) : (
-                         // Image (Right side)
-                         <div className="w-full max-w-[540px] h-[260px] bg-[#EBE4DD] rounded-[12px] flex items-center justify-center shadow-sm relative overflow-hidden">
-                            <Image src={step.image} alt={step.title} fill className="object-cover" />
-                         </div>
-                       )}
+                      {!isEven ? (
+                        // Text Content (Right side)
+                        <div className="flex items-center gap-6 w-full max-w-[540px] min-h-[260px] bg-[#FBF9F6] border border-[#EBE4DD]/70 rounded-xl md:border-l-0 p-8 md:px-12 shadow-sm">
+                          <div className="w-16 h-16 rounded-full border border-[#EBE4DD] flex items-center justify-center flex-shrink-0 bg-white">
+                            {step.icon}
+                          </div>
+                          <div className="flex-1 text-left">
+                            <h3 className="text-[22px] font-serif font-semibold text-[#2C3E2D] mb-2">{step.title}</h3>
+                            <p className="text-[15px] text-[#5F6A5B] leading-relaxed">{step.description}</p>
+                          </div>
+                        </div>
+                      ) : (
+                        // Image (Right side)
+                        <div className="w-full max-w-[540px] h-[260px] bg-[#EBE4DD] rounded-[12px] flex items-center justify-center shadow-sm relative overflow-hidden">
+                          <Image src={step.image} alt={step.title} fill className="object-cover" />
+                        </div>
+                      )}
                     </motion.div>
                   </div>
                 );
@@ -227,15 +232,15 @@ export default function HowItWorksPage() {
                 <p className="text-[14px] font-semibold text-[#5F6A5B]">It only takes a few minutes to get started.</p>
               </div>
             </div>
-            
+
             <div className="flex flex-col gap-4 w-full md:w-auto min-w-[200px]">
               <Link href="/pricing" className="w-full bg-[#55624C] text-white text-center py-3.5 rounded-[3px] text-[13px] font-medium hover:bg-[#4A5546] transition-colors flex items-center justify-center gap-2">
                 Begin Your Legacy
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
               <Link href="/pricing" className="w-full text-center text-[#55624C] text-[13px] font-medium hover:underline flex items-center justify-center gap-2">
                 View Pricing Plans
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
             </div>
           </div>
