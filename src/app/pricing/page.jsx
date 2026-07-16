@@ -1,5 +1,6 @@
 "use client";
 
+import ScrollReveal from "@/components/ScrollReveal";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -10,6 +11,7 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-[#FBF9F6] font-sans selection:bg-[#55624C] selection:text-white pb-0">
       {/* 1. Pricing Hero Section */}
+      <ScrollReveal>
       <section className="relative w-full overflow-hidden bg-[#FBF9F6] pt-12 md:pt-20 lg:pt-24 pb-16 lg:pb-32">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
           {/* Left Text Content */}
@@ -86,8 +88,10 @@ export default function PricingPage() {
             <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#FBF9F6] to-transparent" />
         </div>
       </section>
+      </ScrollReveal>
 
       {/* 2. Pricing Cards Section */}
+      <ScrollReveal>
       <section className="relative w-full -mt-10 lg:-mt-24 z-20">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 lg:gap-6 items-end">
           
@@ -245,8 +249,10 @@ export default function PricingPage() {
 
         </div>
       </section>
+      </ScrollReveal>
 
       {/* 3. Compare Features Section */}
+      <ScrollReveal>
       <section className="w-full max-w-7xl mx-auto px-6 pt-24 pb-20">
         <div className="text-center mb-12">
           <h2 className="text-[28px] md:text-3xl font-serif font-medium text-[#2C3E2D] mb-3">Compare Features</h2>
@@ -302,8 +308,10 @@ export default function PricingPage() {
           </table>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* 4. Trust & Security Section */}
+      <ScrollReveal>
       <section className="relative w-full overflow-hidden bg-[#FBF9F6] border-y border-[#E8E1DA] pt-16 lg:pt-24 pb-32 lg:pb-40">
         {/* Right absolute image */}
         <div className="absolute right-0 top-0 bottom-0 w-full lg:w-1/2 h-full z-0 pointer-events-none hidden lg:block opacity-90">
@@ -376,8 +384,10 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* 5. Bottom CTA Banner */}
+      <ScrollReveal>
       <section className="w-full relative z-20 pb-16">
         <div className="max-w-7xl mx-auto px-6 -mt-12 lg:-mt-20">
           <div className="bg-[#F6F4F1] border border-[#E8E1DA] rounded-[3px] py-6 px-8 md:py-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm relative z-20">
@@ -399,6 +409,7 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
     </div>
   );

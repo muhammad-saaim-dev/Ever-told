@@ -3,15 +3,16 @@ import Features from "@/components/Features";
 import Pricing from "@/components/Pricing";
 import HowItWorks from "@/components/HowItWorks";
 import Testimonial from "@/components/Testimonial";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <Features />
-      <Pricing />
-      <HowItWorks />
-      <Testimonial />
+      <ScrollReveal><Hero /></ScrollReveal>
+      <ScrollReveal><Features /></ScrollReveal>
+      <ScrollReveal><Pricing /></ScrollReveal>
+      <ScrollReveal><HowItWorks /></ScrollReveal>
+      <ScrollReveal><Testimonial /></ScrollReveal>
     </>
   );
 }

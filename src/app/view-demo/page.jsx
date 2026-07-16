@@ -1,5 +1,6 @@
 "use client";
 
+import ScrollReveal from "@/components/ScrollReveal";
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -102,6 +103,7 @@ export default function ViewDemoPage() {
     <div className="bg-[#FBF9F6] text-[#2C3E2D] font-sans selection:bg-[#55624C] selection:text-white pb-0">
       
       {/* 1. Hero Section */}
+      <ScrollReveal>
       <section className="relative w-full overflow-hidden pt-12 md:pt-16 pb-16 lg:pt-24 lg:pb-24">
         {/* Right Background Image for large screens */}
         <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[65%] h-full z-0 pointer-events-none hidden lg:block">
@@ -182,8 +184,10 @@ export default function ViewDemoPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* 2 & 3. Highlight Banner & What's Inside Section */}
+      <ScrollReveal>
       <section className="w-full bg-white border-t border-[#EBE4DD] pb-10">
         {/* Highlight Banner (pulled up to overlap hero) */}
         <div className="max-w-7xl mx-auto px-6 relative z-20 -mt-2 md:-mt-4 lg:-mt-8 mb-8 md:mb-12">
@@ -271,8 +275,10 @@ export default function ViewDemoPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* 4. Experience the Demo (Slider) */}
+      <ScrollReveal>
       <section id="demo-carousel" className="w-full bg-white pt-0 pb-20 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6 relative">
           {/* Header */}
@@ -334,8 +340,10 @@ export default function ViewDemoPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* 5. Client Testimonial Quote Banner */}
+      <ScrollReveal>
       <section className="bg-white py-2">
         <div className="max-w-7xl mx-auto px-6">
           <div className="w-full relative rounded-[8px] overflow-hidden bg-[#F6F4F1] min-h-[220px] md:min-h-[260px] flex items-center border border-[#E8E1DA]">
@@ -368,8 +376,10 @@ export default function ViewDemoPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* 6. Bottom Pre-Footer CTA */}
+      <ScrollReveal>
       <section className="bg-white pt-8 pb-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="w-full bg-[#F6F4F1] rounded-[8px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-[#E8E1DA]">
@@ -410,6 +420,7 @@ export default function ViewDemoPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
     </div>
   );

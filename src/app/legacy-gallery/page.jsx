@@ -1,5 +1,6 @@
 "use client";
 
+import ScrollReveal from "@/components/ScrollReveal";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -99,6 +100,7 @@ export default function LegacyGalleryPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
+      <ScrollReveal>
       <section className="relative w-full overflow-hidden bg-[#FBF9F6] pt-12 md:pt-20 lg:pt-32 pb-16 lg:pb-32 border-b border-[#EBE4DD]">
         {/* Right Background Image for large screens */}
         <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[50%] h-full z-0 hidden lg:block">
@@ -165,8 +167,10 @@ export default function LegacyGalleryPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Filter navigation section */}
+      <ScrollReveal>
       <section className="bg-white border-b border-[#EBE4DD] pt-6 sticky top-[71px] z-40">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
           {/* Categories Tab Bar */}
@@ -206,8 +210,10 @@ export default function LegacyGalleryPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Stories Grid */}
+      <ScrollReveal>
       <section className="bg-[#FBF9F6]/30 pt-16 pb-2">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -275,8 +281,10 @@ export default function LegacyGalleryPage() {
           )}
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Testimonial Quote Banner */}
+      <ScrollReveal>
       <section className="bg-white py-2">
         <div className="max-w-7xl mx-auto px-6">
           <div className="relative rounded-[8px] overflow-hidden bg-[#F6F4F1] min-h-[180px] md:min-h-[220px] flex items-center border border-[#E8E1DA]">
@@ -309,8 +317,10 @@ export default function LegacyGalleryPage() {
         </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Reused Bottom CTA Section */}
+      <ScrollReveal>
       <section className="bg-white pt-2 pb-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="w-full bg-[#F6F4F1] rounded-[8px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-[#E8E1DA]">
@@ -361,6 +371,7 @@ export default function LegacyGalleryPage() {
         </div>
         </div>
       </section>
+      </ScrollReveal>
     </div>
   );
 }

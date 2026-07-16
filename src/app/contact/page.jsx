@@ -1,5 +1,6 @@
 "use client";
 
+import ScrollReveal from "@/components/ScrollReveal";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -37,6 +38,7 @@ export default function ContactPage() {
   return (
     <div className="bg-[#FBF9F6] text-[#2C3E2D]">
       {/* Hero Section */}
+      <ScrollReveal>
       <section className="relative w-full overflow-hidden bg-[#FBF9F6]">
         {/* Right Column - Image (Desktop only, absolutely positioned for full bleed) */}
         <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[55%] h-full z-0 pointer-events-none hidden lg:block">
@@ -128,8 +130,10 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Main 3-Column Content Section */}
+      <ScrollReveal>
       <section className="relative z-20 -mt-12 md:-mt-20 pb-4 md:pb-6">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0">
           
@@ -429,8 +433,10 @@ export default function ContactPage() {
           
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Reused Bottom CTA Section */}
+      <ScrollReveal>
       <section className="pt-2 pb-20 relative z-10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="w-full bg-[#F6F4F1] rounded-[8px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-[#E8E1DA] overflow-hidden relative">
@@ -477,6 +483,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
     </div>
   );
 }
