@@ -206,11 +206,7 @@ export default function HowItWorksPage() {
                   <div key={index} className="flex flex-col md:flex-row items-center justify-center w-full min-h-[220px] py-8 relative">
 
                     {/* Gap Fill Background (desktop) */}
-                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[128px] h-[220px] bg-[#FBF9F6] z-0"></div>
-
-                    {/* Top and Bottom connection lines (desktop) */}
-                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -mt-[110px] w-[128px] h-[1px] bg-[#FBF9F6] z-0"></div>
-                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 mt-[109px] w-[128px] h-[1px] bg-[#FBF9F6] z-0"></div>
+                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[128px] h-[calc(100%-64px)] bg-[#FBF9F6] border-y border-[#EBE4DD]/70 z-0"></div>
 
                     {/* Left Side (Image or Text Card) */}
                     <motion.div
@@ -241,7 +237,7 @@ export default function HowItWorksPage() {
 
                     {/* Center Number Badge */}
                     <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#55624C] text-white items-center justify-center font-serif text-lg z-20 border-4 border-white">
-                      {index + 1}
+                      <span className="relative -top-[2px]">{index + 1}</span>
                     </div>
 
                     {/* Right Side (Text Card or Image) */}
