@@ -127,6 +127,17 @@ export default function Header() {
             >
               Contact Us
             </Link>
+            <Link
+              href="/view-demo"
+              onClick={() => setIsOpen(false)}
+              className={`text-[13px] font-semibold transition-colors py-1 ${
+                pathname === "/view-demo"
+                  ? "text-[#55624C] md:border-b-2 md:border-[#55624C]"
+                  : "text-[#2C3E2D] hover:text-[#55624C]"
+              }`}
+            >
+              View Demo
+            </Link>
           </nav>
 
           {/* CTAs */}
