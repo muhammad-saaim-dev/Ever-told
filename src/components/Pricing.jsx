@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Pricing() {
   const [selectedPackage, setSelectedPackage] = useState(null);
@@ -11,9 +12,15 @@ export default function Pricing() {
       price: "499",
       popular: false,
       icon: (
-        <svg className="w-8 h-8 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v18M3 12h18M12 3a9 9 0 0 1 9 9M12 21a9 9 0 0 1-9-9" />
-        </svg>
+        <div className="relative w-10 h-10 flex items-center justify-center overflow-hidden mix-blend-multiply">
+          <Image 
+            src="/essential-leaf.jpg" 
+            alt="Essential Leaf Icon" 
+            fill
+            sizes="40px"
+            className="object-contain scale-[1.8] brightness-[1.05] contrast-[1.05]" 
+          />
+        </div>
       ),
       features: [
         "Personalized legacy website",
@@ -32,9 +39,15 @@ export default function Pricing() {
       price: "999",
       popular: true,
       icon: (
-        <svg className="w-8 h-8 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 2c-.53 0-1.039.211-1.414.586L2.586 10.586a2 2 0 0 0 0 2.828l8 8a2 2 0 0 0 2.828 0l8-8a2 2 0 0 0 0-2.828l-8-8A2 2 0 0 0 12 2zM12 6v12M6 12h12" />
-        </svg>
+        <div className="relative w-10 h-10 flex items-center justify-center overflow-hidden mix-blend-multiply">
+          <Image 
+            src="/singnatur-leaf.jpg" 
+            alt="Signature Leaf Icon" 
+            fill
+            sizes="40px"
+            className="object-contain scale-[1.8] brightness-[1.05] contrast-[1.05]" 
+          />
+        </div>
       ),
       features: [
         "Everything in Essential",
@@ -53,9 +66,15 @@ export default function Pricing() {
       price: "1,699",
       popular: false,
       icon: (
-        <svg className="w-8 h-8 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v18M3 12h18M12 3a9 9 0 0 1 9 9M12 21a9 9 0 0 1-9-9" />
-        </svg>
+        <div className="relative w-10 h-10 flex items-center justify-center overflow-hidden mix-blend-multiply">
+          <Image 
+            src="/legacy-tree.jpg" 
+            alt="Legacy Tree Icon" 
+            fill
+            sizes="40px"
+            className="object-contain scale-[1.8] brightness-[1.05] contrast-[1.05]" 
+          />
+        </div>
       ),
       features: [
         "Everything in Signature",
