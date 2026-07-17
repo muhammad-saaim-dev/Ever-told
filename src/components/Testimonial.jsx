@@ -131,9 +131,11 @@ export default function Testimonial() {
             <div className="flex flex-col items-center text-center px-4">
               <div className="mb-4 flex items-center justify-center text-[#55624C]">
                 <svg className="w-9 h-9" fill="none" stroke="currentColor" strokeWidth="1.2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 14a4 4 0 004 4h1a1 1 0 001-1v-4a1 1 0 00-1-1H5V9a7 7 0 0114 0v4h-4a1 1 0 00-1 1v4a1 1 0 001 1h1a4 4 0 004-4" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M20 14v2a3 3 0 01-3 3h-2" />
-                  <circle cx="15" cy="19" r="1" fill="currentColor"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 12V9a6 6 0 1112 0v3" />
+                  <rect x="4" y="11" width="4" height="6" rx="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <rect x="16" y="11" width="4" height="6" rx="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M18 17v2a3 3 0 01-3 3h-3" />
+                  <circle cx="11" cy="22" r="1.5" fill="currentColor" stroke="none" />
                 </svg>
               </div>
               <h4 className="font-serif text-base font-bold text-[#2C3E2D] mb-2">Here to Help</h4>
