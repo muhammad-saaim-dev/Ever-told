@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Main Content */}
-        <div className="flex flex-col lg:flex-row lg:justify-between gap-4 pb-4 border-b border-[#EBE4DD]">
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-10 lg:gap-4 pb-8 lg:pb-4 border-b border-[#EBE4DD]">
           
           {/* Logo & Description */}
           <div className="flex flex-col space-y-2 lg:w-[320px]">
@@ -63,51 +63,54 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Explore Links */}
-          <div className="flex flex-col space-y-2">
-            <h4 className="text-[11px] font-bold text-[#2C3E2D]">Explore</h4>
-            <ul className="space-y-1">
-              <li><Link href="/contact" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">Contact Us</Link></li>
-              <li><Link href="/view-demo" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">View Demo</Link></li>
-              <li><Link href="#how-it-works" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">How It Works</Link></li>
-              <li><Link href="/legacy-gallery" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">Legacy Gallery</Link></li>
-              <li><Link href="/pricing" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">Pricing</Link></li>
-              <li><Link href="#" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">Resources</Link></li>
-            </ul>
-          </div>
+          {/* Links Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 lg:flex lg:gap-12 w-full lg:w-auto">
+            {/* Explore Links */}
+            <div className="flex flex-col space-y-2">
+              <h4 className="text-[11px] font-bold text-[#2C3E2D]">Explore</h4>
+              <ul className="space-y-2">
+                <li><Link href="/contact" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">Contact Us</Link></li>
+                <li><Link href="/view-demo" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">View Demo</Link></li>
+                <li><Link href="#how-it-works" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">How It Works</Link></li>
+                <li><Link href="/legacy-gallery" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">Legacy Gallery</Link></li>
+                <li><Link href="/pricing" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">Pricing</Link></li>
+                <li><Link href="#" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">Resources</Link></li>
+              </ul>
+            </div>
 
-          {/* Support Links */}
-          <div className="flex flex-col space-y-2">
-            <h4 className="text-[11px] font-bold text-[#2C3E2D]">Support</h4>
-            <ul className="space-y-1">
-              <li><Link href="#" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">FAQs</Link></li>
-              <li><Link href="#" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">Help Center</Link></li>
-              <li><Link href="#" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">Privacy Policy</Link></li>
-              <li><Link href="#" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">Terms of Service</Link></li>
-            </ul>
-          </div>
+            {/* Support Links */}
+            <div className="flex flex-col space-y-2">
+              <h4 className="text-[11px] font-bold text-[#2C3E2D]">Support</h4>
+              <ul className="space-y-2">
+                <li><Link href="#" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">FAQs</Link></li>
+                <li><Link href="#" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">Help Center</Link></li>
+                <li><Link href="#" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">Privacy Policy</Link></li>
+                <li><Link href="#" className="text-[11px] text-[#4A5546] hover:text-[#2C3E2D] font-bold transition-colors">Terms of Service</Link></li>
+              </ul>
+            </div>
 
-          {/* Contact Links */}
-          <div className="flex flex-col space-y-2">
-            <h4 className="text-[11px] font-bold text-[#2C3E2D]">Contact</h4>
-            <ul className="space-y-1">
-              <li className="flex items-center gap-2 text-[11px] text-[#4A5546] font-bold">
-                <svg className="w-3.5 h-3.5 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
-                hello@evertold.com
-              </li>
-              <li className="flex items-center gap-2 text-[11px] text-[#4A5546] font-bold">
-                <svg className="w-3.5 h-3.5 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.824-1.478-5.123-3.777-6.581-6.6l1.293-.97c.361-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
-                +49 89 1234 5678
-              </li>
-              <li className="flex items-center gap-2 text-[11px] text-[#4A5546] font-bold">
-                <svg className="w-3.5 h-3.5 text-[#55624C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0zM19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
-                Munich, Germany
-              </li>
-            </ul>
+            {/* Contact Links */}
+            <div className="flex flex-col space-y-2 col-span-2 sm:col-span-1">
+              <h4 className="text-[11px] font-bold text-[#2C3E2D]">Contact</h4>
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2 text-[11px] text-[#4A5546] font-bold">
+                  <svg className="w-4.5 h-4.5 text-[#55624C] shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+                  <span className="truncate">hello@evertold.com</span>
+                </li>
+                <li className="flex items-center gap-2 text-[11px] text-[#4A5546] font-bold">
+                  <svg className="w-4.5 h-4.5 text-[#55624C] shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.824-1.478-5.123-3.777-6.581-6.6l1.293-.97c.361-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
+                  <span className="whitespace-nowrap">+49 89 1234 5678</span>
+                </li>
+                <li className="flex items-center gap-2 text-[11px] text-[#4A5546] font-bold">
+                  <svg className="w-4.5 h-4.5 text-[#55624C] shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0zM19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+                  <span className="whitespace-nowrap">Munich, Germany</span>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Right Column */}
-          <div className="flex flex-col items-center justify-start gap-2 lg:max-w-[140px] pt-1 lg:pt-0 -mt-2 lg:-mt-4">
+          <div className="flex flex-col items-center justify-start gap-3 lg:max-w-[140px] pt-4 lg:pt-6">
             <div className="relative w-16 h-16 flex items-center justify-center overflow-hidden mix-blend-multiply shrink-0">
               <Image 
                 src="/footer_leaf.jpg" 
@@ -117,7 +120,7 @@ export default function Footer() {
                 className="object-contain scale-[2.2] brightness-[1.05] contrast-[1.05]" 
               />
             </div>
-            <span className="text-[10px] text-[#2C3E2D] font-sans font-extrabold leading-[1.4] text-center">
+            <span className="text-xs text-[#2C3E2D] font-sans font-bold leading-[1.5] text-center">
               Serving families<br />across Europe<br />and beyond.
             </span>
           </div>
