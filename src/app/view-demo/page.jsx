@@ -191,17 +191,26 @@ export default function ViewDemoPage() {
       <section className="w-full bg-white border-t border-[#EBE4DD] pb-10">
         {/* Highlight Banner (pulled up to overlap hero) */}
         <div className="max-w-7xl mx-auto px-6 relative z-20 -mt-2 md:-mt-4 lg:-mt-8 mb-8 md:mb-12">
-          <div className="bg-[#F6F4F1] border border-[#E8E1DA] rounded-[8px] p-6 md:p-8 flex flex-col md:flex-row items-center md:items-start gap-6 shadow-sm">
-            <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-[#E8E1DA] shrink-0 text-[#55624C]">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
-              </svg>
+          <div className="bg-white border border-[#EBE4DD] rounded-[8px] p-6 md:p-8 flex flex-col md:flex-row items-center md:justify-center gap-6 md:gap-8 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+            <div className="w-[84px] h-[84px] rounded-full bg-[#F3EFEA] border border-[#E8E1DA] flex items-center justify-center shrink-0">
+              <div className="w-[64px] h-[64px] rounded-full bg-[#EBE4DD]/60 flex items-center justify-center">
+                <svg className="w-8 h-8 text-[#55624C]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.2">
+                  {/* Laptop Frame */}
+                  <rect x="3" y="4" width="18" height="12" rx="2" ry="2" strokeLinecap="round" strokeLinejoin="round" />
+                  {/* Laptop Base */}
+                  <path d="M2 20h20" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M7 20v-4m10 4v-4" strokeLinecap="round" strokeLinejoin="round" opacity="0.3" />
+                  {/* Leaf inside screen */}
+                  <path d="M12 7c-2.5 0-3.5 2-3.5 3.5 0 2.5 3.5 4.5 3.5 4.5s3.5-2 3.5-4.5C15.5 9 14.5 7 12 7z" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M12 15v-4" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
             </div>
-            <div className="flex-1 text-center md:text-left space-y-2">
-              <h4 className="font-serif text-lg font-bold text-[#2C3E2D]">
+            <div className="text-center md:text-left space-y-1.5 md:space-y-2.5 max-w-2xl">
+              <h4 className="font-serif text-[19px] md:text-[22px] font-semibold text-[#2C3E2D] tracking-tight">
                 Every legacy website is as unique as the life it celebrates.
               </h4>
-              <p className="text-sm font-medium text-[#4A5546] leading-relaxed">
+              <p className="text-[13.5px] md:text-[14.5px] font-bold text-[#4A5546] leading-relaxed max-w-2xl">
                 This is a real example created using Ever Told. Your legacy website will be beautifully customized with your photos, stories, and memories.
               </p>
             </div>
@@ -227,13 +236,13 @@ export default function ViewDemoPage() {
                 <div
                   key={idx}
                   onClick={() => setActiveFeature(idx)}
-                  className={`flex items-start gap-5 p-5 border-b border-[#E8E1DA] last:border-b-0 transition-all duration-300 cursor-pointer ${
+                  className={`flex items-center gap-5 p-5 border-b border-[#E8E1DA] last:border-b-0 transition-all duration-300 cursor-pointer ${
                     activeFeature === idx
                       ? "bg-white shadow-sm relative z-10"
                       : "hover:bg-white/60"
                   }`}
                 >
-                  <div className="flex items-center justify-center shrink-0 mt-0.5 transform scale-125 text-[#55624C]">
+                  <div className="flex items-center justify-center shrink-0 transform scale-[1.75] text-[#55624C] ml-2 mr-3">
                     {feature.icon}
                   </div>
                   <div className="flex-1 text-left">
