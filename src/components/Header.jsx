@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
@@ -14,41 +15,15 @@ export default function Header() {
         <div className="flex items-center justify-between w-full md:w-auto">
           {/* Logo and Brand */}
           <Link href="/" className="flex items-center gap-3.5 group">
-            {/* Detailed custom SVG for open book with a leaf stem */}
-            <svg
-              className="w-[42px] h-[42px] text-[#55624C] transition-transform duration-300 group-hover:scale-105"
-              viewBox="0 0 64 64"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              {/* Book Pages Cover (Bottom Layer) */}
-              <path d="M6 46C15 42 24 44 32 48C40 44 49 42 58 46V16C49 12 40 14 32 18C24 14 15 12 6 16V46Z" strokeWidth="1.5" />
-              
-              {/* Page Layers (Left) */}
-              <path d="M8 43C16 39 24 41 32 45" strokeWidth="1.2" />
-              <path d="M10 40C18 36 26 38 32 42" strokeWidth="1" />
-              
-              {/* Page Layers (Right) */}
-              <path d="M56 43C48 39 40 41 32 45" strokeWidth="1.2" />
-              <path d="M54 40C46 36 38 38 32 42" strokeWidth="1" />
-              
-              {/* Spine */}
-              <path d="M32 18V48" strokeWidth="1.5" />
-
-              {/* Delicate Leaf Stem growing up-right */}
-              <path d="M32 36C32 29 35 23 39 16" strokeWidth="1.2" />
-              {/* Leaf 1 (Left low) */}
-              <path d="M33 30C31 29.5 30 28 31 27C32 26 34 27 34.5 28.5" strokeWidth="1" />
-              {/* Leaf 2 (Right low) */}
-              <path d="M34.5 27.5C36.5 27.5 37.5 25.5 36.5 24.5C35.5 23.5 33.5 24.5 33 26" strokeWidth="1" />
-              {/* Leaf 3 (Left mid) */}
-              <path d="M35.5 23.5C33.5 22.5 32.5 20.5 33.5 19.5C34.5 18.5 36.5 19.5 37 21" strokeWidth="1" />
-              {/* Leaf 4 (Right mid) */}
-              <path d="M37 20.5C39 20.5 40 18.5 39 17.5C38 16.5 36 17.5 35.5 19" strokeWidth="1" />
-            </svg>
+            <div className="relative w-[60px] h-[46px] md:w-[68px] md:h-[52px] flex items-center justify-center overflow-hidden mix-blend-multiply shrink-0">
+              <Image 
+                src="/logo.jpg" 
+                alt="Ever Told Logo" 
+                fill
+                sizes="256px"
+                className="object-contain scale-[1.6] md:scale-[1.7] brightness-[1.05] contrast-[1.05] transition-transform duration-300 group-hover:scale-[1.7] md:group-hover:scale-[1.8]" 
+              />
+            </div>
             
             <div className="flex flex-col">
               <span className="font-serif text-2xl font-medium tracking-[0.15em] text-[#2C3E2D]">
