@@ -37,7 +37,7 @@ export default function Hero() {
               </button>
               <div className="absolute inset-0 pointer-events-none overflow-hidden">
                 <iframe 
-                  className="w-[135%] h-[135%] absolute left-1/2 top-0 -translate-x-1/2 -translate-y-[5%]"
+                  className="w-[150%] h-[150%] absolute left-1/2 top-0 -translate-x-1/2 -translate-y-[15%]"
                   src="https://www.youtube.com/embed/fYImnOiz2_8?autoplay=1&controls=0&rel=0&modestbranding=1&playsinline=1"
                   title="Ever Told - A Home for Every Legacy"
                   frameBorder="0"
@@ -109,7 +109,7 @@ export default function Hero() {
             </div>
 
             {/* Inline Image or Video for Mobile/Tablet */}
-            <div className="block lg:hidden mt-8 w-full relative aspect-[4/3] overflow-hidden bg-[#EBE4DD] rounded-[8px]">
+            <div className="block lg:hidden mt-8 w-full relative aspect-[4/3] overflow-hidden bg-[#EBE4DD] rounded-[8px] pointer-events-auto">
               {showVideo && isMobile ? (
                 <div className="w-full h-full relative overflow-hidden bg-black z-20">
                   <button 
@@ -123,7 +123,7 @@ export default function Hero() {
                   </button>
                   <div className="absolute inset-0 pointer-events-none overflow-hidden">
                     <iframe 
-                      className="w-[145%] h-[145%] absolute left-1/2 top-0 -translate-x-1/2 -translate-y-[5%]"
+                      className="w-[170%] h-[170%] absolute left-1/2 top-0 -translate-x-1/2 -translate-y-[20%]"
                       src="https://www.youtube.com/embed/fYImnOiz2_8?autoplay=1&controls=0&rel=0&modestbranding=1&playsinline=1"
                       title="Ever Told - A Home for Every Legacy"
                       frameBorder="0"

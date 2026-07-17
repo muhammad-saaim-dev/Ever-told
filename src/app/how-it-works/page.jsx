@@ -102,7 +102,7 @@ export default function HowItWorksPage() {
                 </button>
                 <div className="absolute inset-0 pointer-events-none overflow-hidden">
                   <iframe 
-                    className="w-[135%] h-[135%] absolute left-1/2 top-0 -translate-x-1/2 -translate-y-[5%]"
+                    className="w-[150%] h-[150%] absolute left-1/2 top-0 -translate-x-1/2 -translate-y-[15%]"
                     src="https://www.youtube.com/embed/fYImnOiz2_8?autoplay=1&controls=0&rel=0&modestbranding=1&playsinline=1"
                     title="Ever Told - A Home for Every Legacy"
                     frameBorder="0"
@@ -155,7 +155,7 @@ export default function HowItWorksPage() {
           </div>
 
           {/* Mobile Image Placeholder */}
-          <div className="w-full h-[300px] bg-[#EBE4DD] rounded-[8px] flex items-center justify-center lg:hidden relative overflow-hidden">
+          <div className="w-full h-[300px] bg-[#EBE4DD] rounded-[8px] flex items-center justify-center lg:hidden relative overflow-hidden pointer-events-auto">
             {showVideo && isMobile ? (
               <div className="w-full h-full relative overflow-hidden bg-black">
                 <button 
@@ -169,7 +169,7 @@ export default function HowItWorksPage() {
                 </button>
                 <div className="absolute inset-0 pointer-events-none overflow-hidden">
                   <iframe 
-                    className="w-[145%] h-[145%] absolute left-1/2 top-0 -translate-x-1/2 -translate-y-[5%]"
+                    className="w-[170%] h-[170%] absolute left-1/2 top-0 -translate-x-1/2 -translate-y-[20%]"
                     src="https://www.youtube.com/embed/fYImnOiz2_8?autoplay=1&controls=0&rel=0&modestbranding=1&playsinline=1"
                     title="Ever Told - A Home for Every Legacy"
                     frameBorder="0"
